@@ -1,6 +1,6 @@
 package controllers
 
-import play.api.mvc.{Call, Action, AnyContent, Results}
+import play.api.mvc.{Call, Action, AnyContent}
 import play.api.Play
 import play.api.Play.current
 
@@ -10,7 +10,6 @@ import scala.collection.JavaConversions.asScalaSet
 import org.reflections.Reflections
 import org.reflections.util.{ClasspathHelper, ConfigurationBuilder}
 import org.reflections.scanners.ResourcesScanner
-import java.util.regex.Pattern
 
 object WebJarAssets {
   
