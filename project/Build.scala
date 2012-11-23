@@ -1,6 +1,7 @@
 import sbt._
 import Keys._
 import PlayProject._
+import java.io.File
 
 object ApplicationBuild extends Build {
 
@@ -8,16 +9,12 @@ object ApplicationBuild extends Build {
   val appVersion      = "1.0-SNAPSHOT"
 
   val appDependencies = Seq(
-    javaCore,
-    "org.webjars" % "webjars-play" % "2.1-RC1",
+    "org.webjars" % "webjars-play" % "2.0",
     "org.webjars" % "bootstrap" % "2.1.1"
   )
 
-  val main = play.Project(appName, appVersion, appDependencies).settings(
-    resolvers ++= Seq(
-      Resolver.mavenLocal,
-      Resolver.file("LocalIvy", file("/home/jamesw/.ivy2/local"))(Resolver.ivyStylePatterns)
-    )
+  val main = PlayProject(appName, appVersion, appDependencies, mainLang = JAVA).settings(
+    resolvers += Resolver.file("LocalIvy", file(Path.userHome + File.separator + ".ivy2" + File.separator + "local"))(Resolver.ivyStylePatterns)
   )
 
 }
