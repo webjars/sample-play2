@@ -7,7 +7,7 @@ resolvers += Resolver.file("LocalIvy", file(Path.userHome + "/.ivy2/local"))(Res
 resolvers += DefaultMavenRepository
 
 libraryDependencies ++= Seq(
-  "org.webjars" %% "webjars-play" % "2.2.0-RC1-SNAPSHOT",
+  "org.webjars" %% "webjars-play" % "2.2.0",
   "org.webjars" % "bootstrap" % "2.1.1"
 )     
 
