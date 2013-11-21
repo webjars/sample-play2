@@ -4,6 +4,7 @@
 
 # Home page
 GET     /                           controllers.Application.index()
+GET     /durandal                   controllers.Application.durandal()
 
 GET     /js/require-loader.js       controllers.WebJarAssets.requirejs()
 GET     /webjars/*file              controllers.WebJarAssets.at(file)
