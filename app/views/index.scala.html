@@ -12,31 +12,57 @@
     </style>
 </head>
 <body>
-    <h1></h1>
-
-    <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container-fluid">
-                <a id="titleLink" class="brand" href="/">hello, bootstrap</a>
-            </div>
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Webjars Require JS Test</a>
         </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
     </div>
 
     <div class="container">
-        <button id="showModalButton" class="btn btn-primary btn-large"><i class="icon-exclamation-sign icon-white"></i> Show a Modal</button>
+    	<div class="row">
+    		<div class="col-lg-12">
+    			<h1>Require Test</h1>
+    		</div>
+    	</div>
+    	<div class="row">
+    		<div class="col-lg-6">
+    			<button id="showModalButton" class="btn btn-primary btn-large"><span class="glyphicon glyphicon-exclamation-sign"></span> Show a Modal</button>
+    		</div>
+			<div class="col-lg-6">
+    			<a class="btn btn-primary btn-large" href="/durandal">Go to Durandal test page</a>
+    		</div>
+    	</div>
     </div>
-
-    <div id="myModal" class="modal hide fade">
-        <div class="modal-header">
-            <button class="close" data-dismiss="modal">&times;</button>
-            <h3>This is a Modal</h3>
-        </div>
-        <div class="modal-body">
-            <p>Bootstrap depends on jQuery.  So when you specify Bootstrap as a dependency you get jQuery too.</p>
-        </div>
-        <div class="modal-footer">
-            <a href="#" class="btn" data-dismiss="modal">Close</a>
-        </div>
-    </div>
+    
+    <div id="myModal" class="modal fade">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        <h4 class="modal-title">This is a Modal</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>Bootstrap depends on jQuery.  So when you specify Bootstrap as a dependency you get jQuery too.</p>
+	        <p>Although, jquery is added here to force a higher version.</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
 </body>
 </html>
