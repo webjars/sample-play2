@@ -1,13 +1,15 @@
 requirejs.config({
 	paths: {
-        'text': '/assets/text'
-        //'plugins': '/assets/javascripts/durandal/plugins',  <---- This would also needed to figure out since this seems to be pointing to a directory
-        //'transitions': '/assets/javascripts/durandal/transitions',  <---- this too
-		//'knockout': '/assets/javascripts/knockout-3.0.0'  <---- Didn't try to get this from a webjar yet, in my somewhat working copy I used it like this.
+        'text': '/assets/text',
+        'durandal': '../../webjars/durandal/2.0.1/js',
+        'jquery': '../../webjars/jquery/2.0.3/jquery',
+        'knockout': '../../webjars/knockout/2.2.1/knockout',
+        'plugins': '../../webjars/durandal/2.0.1/js/plugins',
+        'transitions': '../../webjars/durandal/2.0.1/js/transitions'
     }
 });
 
-define(['webjars!system.js', 'webjars!app.js', 'webjars!viewLocator.js'],  function (system, app, viewLocator) {
+define(['durandal/system', 'durandal/app', 'durandal/viewLocator'], function (system, app, viewLocator) {
     //>>excludeStart("build", true);
     system.debug(true);
     //>>excludeEnd("build");
