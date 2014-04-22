@@ -4,20 +4,24 @@
     <title>Play2 WebJars Demo</title>
     <link rel='shortcut icon' type='image/png' href='@routes.Assets.at("images/favicon.png")'>
     <link rel='stylesheet' href='@routes.WebJarAssets.at(WebJarAssets.locate("bootstrap.min.css"))'>
-    <script data-main="@routes.Assets.at("main.js")" src="@routes.WebJarAssets.requirejs()"></script>
+    
+    <script>
+        @Html(org.webjars.RequireJS.getSetupJavaScript("/webjars/"))
+    </script>
+    
+    <script data-main="@routes.Assets.at("main.js")" src="@routes.WebJarAssets.at(WebJarAssets.locate("require.js"))"></script>
     <style type="text/css">
         body {
-            margin-top: 50px;
+            margin-top: 60px;
         }
     </style>
 </head>
 <body>
-    <h1></h1>
 
-    <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container-fluid">
-                <a id="titleLink" class="brand" href="/">hello, bootstrap</a>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">hello, bootstrap</a>
             </div>
         </div>
     </div>
@@ -26,16 +30,20 @@
         <button id="showModalButton" class="btn btn-primary btn-large"><i class="icon-exclamation-sign icon-white"></i> Show a Modal</button>
     </div>
 
-    <div id="myModal" class="modal hide fade">
-        <div class="modal-header">
-            <button class="close" data-dismiss="modal">&times;</button>
-            <h3>This is a Modal</h3>
-        </div>
-        <div class="modal-body">
-            <p>Bootstrap depends on jQuery.  So when you specify Bootstrap as a dependency you get jQuery too.</p>
-        </div>
-        <div class="modal-footer">
-            <a href="#" class="btn" data-dismiss="modal">Close</a>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">This is a Modal</h4>
+                </div>
+                <div class="modal-body">
+                    Bootstrap depends on jQuery.  So when you specify Bootstrap as a dependency you get jQuery too.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
     </div>
 </body>

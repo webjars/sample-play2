@@ -1,4 +1,4 @@
-require(['webjars!bootstrap.min'], function() {
+require(['bootstrap'], function() {
     $("#showModalButton").bind('click', function(event) {
         $('#myModal').modal()
     })

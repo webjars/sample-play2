@@ -5,7 +5,6 @@
 # Home page
 GET     /                           controllers.Application.index()
 
-GET     /js/require-loader.js       controllers.WebJarAssets.requirejs()
 GET     /webjars/*file              controllers.WebJarAssets.at(file)
 
 # Map static resources from the /public folder to the /assets URL path
