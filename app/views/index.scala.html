@@ -4,12 +4,17 @@
     <title>Play2 WebJars Demo</title>
     <link rel='shortcut icon' type='image/png' href='@routes.Assets.at("images/favicon.png")'>
     <link rel='stylesheet' href='@routes.WebJarAssets.at(WebJarAssets.locate("bootstrap.min.css"))'>
-    
+
+    @Html(org.webjars.play.RequireJS.setup("main"))
+
+    @*
     <script>
         @Html(org.webjars.RequireJS.getSetupJavaScript("/webjars/"))
     </script>
     
     <script data-main="@routes.Assets.at("main.js")" src="@routes.WebJarAssets.at(WebJarAssets.locate("require.js"))"></script>
+    *@
+
     <style type="text/css">
         body {
             margin-top: 60px;
