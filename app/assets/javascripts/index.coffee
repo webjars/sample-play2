@@ -1,2 +1,3 @@
-require ["bootstrap"], () ->
-  console.log "boostrap javascript loaded"
+require ["jquery"], () ->
+  require ["bootstrap"], () ->
+    console.log "boostrap javascript loaded"

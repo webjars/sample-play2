@@ -6,7 +6,23 @@
     <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/index.min.css")">
     <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
     <script>
-        @Html(org.webjars.RequireJS.getSetupJavaScript(routes.WebJarAssets.at("").url))
+        var require = {
+            callback: function() {
+                // default requirejs configs
+                @for(j <- org.webjars.RequireJS.getSetupJson(routes.WebJarAssets.at("").url).values()) {
+                    requirejs.config(@Html(j.toString));
+                }
+
+                requirejs.config({
+                    paths: {
+                        jquery: "//code.jquery.com/jquery-1.11.1.min"
+                    },
+                    shim: {
+                        bootstrap: []
+                    }
+                });
+            }
+        };
     </script>
     <script data-main="@routes.Assets.versioned("javascripts/index.js")" src="@routes.WebJarAssets.at(WebJarAssets.locate("require.min.js"))"></script>
 </head>
