@@ -1,0 +1,13 @@
+{
+  "name": "Play Framework + WebJars",
+  "description": "A template for getting started with Play Framework and WebJars.",
+  "website": "http://webjars.org",
+  "success_url": "/",
+  "addons": [],
+  "env": {
+    "APPLICATION_SECRET": {
+            "description": "The auto-generated secret which is used for cookie signing and encryption.",
+            "generator": "secret"
+    }
+  }
+}

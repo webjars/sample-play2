@@ -1,5 +1,0 @@
-Play 2 WebJars Demo
-=====================================
-
-This example shows how to specify web libraries as dependencies using WebJars.  WebJars is a collection of web libraries (JavaScript and CSS) packaged as JAR files:
-http://github.com/webjars

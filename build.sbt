@@ -5,7 +5,7 @@ version := "1.0-SNAPSHOT"
 scalaVersion := "2.11.2"
 
 libraryDependencies ++= Seq(
-  "org.webjars" %% "webjars-play" % "2.3.0",
+  "org.webjars" %% "webjars-play" % "2.3.0-1",
   "org.webjars" % "bootstrap" % "3.1.1-1",
   "org.webjars" % "jquery" % "1.11.1"
 )
