@@ -5,14 +5,13 @@ version := "1.0-SNAPSHOT"
 scalaVersion := "2.11.6"
 
 libraryDependencies ++= Seq(
-  "org.webjars" %% "webjars-play" % "2.4.0",
   "org.webjars" % "bootstrap" % "3.1.1-1",
   "org.webjars" % "jquery" % "1.11.1"
 )
 
-LessKeys.compress in Assets := true
+pipelineStages := Seq(rjs, digest, gzip)
 
-pipelineStages := Seq(digest, gzip)
+LessKeys.compress in Assets := true
 
 includeFilter in (Assets, LessKeys.less) := "*.less"
 
