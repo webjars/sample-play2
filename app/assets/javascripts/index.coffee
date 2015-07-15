@@ -1,2 +1,2 @@
-require ["bootstrap"], () ->
-  console.log "boostrap javascript loaded"
+require ["validate-js"], () ->
+  console.log "validate.js javascript loaded"
