@@ -1,14 +1,13 @@
+@(webJarAssets: WebJarAssets, requireJS: org.webjars.play.RequireJS)
 <!DOCTYPE html>
 <html>
 <head>
     <title>WebJar Sample for Play 2.x</title>
-    <link rel='stylesheet' href='@routes.WebJarAssets.at(WebJarAssets.locate("css/bootstrap.min.css"))'>
+    <link rel='stylesheet' href='@routes.WebJarAssets.at(webJarAssets.locate("css/bootstrap.min.css"))'>
     <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/index.min.css")">
     <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
-    <script>
-        @Html(org.webjars.RequireJS.getSetupJavaScript(routes.WebJarAssets.at("").url))
-    </script>
-    <script data-main="@routes.Assets.versioned("javascripts/index.js")" src="@routes.WebJarAssets.at(WebJarAssets.locate("require.min.js"))"></script>
+
+    @Html(requireJS.setup(routes.Assets.versioned("javascripts/index.js")))
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
