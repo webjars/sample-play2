@@ -2,11 +2,11 @@ name := "webjars-sample-play2"
 
 version := "1.0-SNAPSHOT"
 
-scalaVersion := "2.12.2"
+scalaVersion := "2.12.3"
 
 libraryDependencies ++= Seq(
   guice,
-  "org.webjars" %% "webjars-play" % "2.6.0",
+  "org.webjars" %% "webjars-play" % "2.6.1",
   "org.webjars" % "bootstrap" % "3.3.4"
 )
 
