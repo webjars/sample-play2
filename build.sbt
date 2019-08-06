@@ -1,12 +1,12 @@
+enablePlugins(PlayScala)
+
 name := "webjars-sample-play2"
 
-version := "1.0-SNAPSHOT"
-
-scalaVersion := "2.12.3"
+scalaVersion := "2.13.0"
 
 libraryDependencies ++= Seq(
   guice,
-  "org.webjars" %% "webjars-play" % "2.6.1",
+  "org.webjars" %% "webjars-play" % "2.7.3",
   "org.webjars" % "bootstrap" % "3.3.4"
 )
 
@@ -18,4 +18,3 @@ includeFilter in (Assets, LessKeys.less) := "*.less"
 
 routesGenerator := InjectedRoutesGenerator
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala)
