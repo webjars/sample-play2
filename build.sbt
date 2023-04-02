@@ -2,7 +2,7 @@ enablePlugins(PlayScala)
 
 name := "webjars-sample-play2"
 
-scalaVersion := "2.13.0"
+scalaVersion := "2.13.10"
 
 libraryDependencies ++= Seq(
   guice,
