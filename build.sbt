@@ -10,11 +10,11 @@ libraryDependencies ++= Seq(
   "org.webjars" % "bootstrap" % "3.3.4"
 )
 
-LessKeys.compress in Assets := true
+(Assets / LessKeys.compress) := true
 
 pipelineStages := Seq(digest, gzip)
 
-includeFilter in (Assets, LessKeys.less) := "*.less"
+(Assets / LessKeys.less / includeFilter) := "*.less"
 
 routesGenerator := InjectedRoutesGenerator
 
