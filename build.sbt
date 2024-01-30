@@ -7,7 +7,7 @@ scalaVersion := "2.13.0"
 libraryDependencies ++= Seq(
   guice,
   "org.webjars" %% "webjars-play" % "2.7.3",
-  "org.webjars" % "bootstrap" % "3.3.4"
+  "org.webjars" % "bootstrap" % "3.3.7-1"
 )
 
 (Assets / LessKeys.compress) := true
